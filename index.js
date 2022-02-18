@@ -1,13 +1,65 @@
-// TODO: Include packages needed for this application
+//Include packages needed for this application
+const inq = require('inquirer');
+const fs = require('fs');
 
-// TODO: Create an array of questions for user input
-const questions = [];
+// Create an array of questions for user input
+const questions = [{
+    type: 'input',
+    name: 'user',
+    message: 'What is your GitHub username?',
+}, {
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address?',
+}, {
+    type: 'input',
+    name: 'title',
+    message: 'Wat is the title for your project?',
+    default: 'My Project',
+}, {
+    type: 'input',
+    name: 'desc',
+    message: 'Please write a description for your project?',
+},{
+    type: 'list',
+    name: 'license',
+    message: 'Please choose a license.',
+    choices: ['None', 'Apache', 'BSD', 'Eclipse', 'GNU GPL v3', 'GNU GPL v2', 'IBM', 'ISC', 'MIT', 'Mozilla', 'Unlicense'],
+    default: 'None',
+}, {
+    type: 'input',
+    name: 'install',
+    message: 'What command should be run to install dependencies',
+    default: 'npm i',
+},  {
+    type: 'input',
+    name: 'test',
+    message: 'What command should be run to run tests?',
+    default: 'npm test'
+},  {
+    type: 'input',
+    name: 'contribute',
+    message: 'What does the user need to know about contributing to the repo?',
+}
+];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+//  Create a function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        err ? console.log(`Unable to save file. ${err}`) : console.log('The file has been saved!');
+    })
+};
 
-// TODO: Create a function to initialize app
-function init() {}
+// Create a function to initialize app
+let init = () => {
+
+    const generateMarkdown = require('./utils/generateMarkdown');
+
+    inq.prompt(questions).then((answers) => {
+        let test = generateMarkdown(answers);
+        writeToFile('README.md', test);
+    });
+}
 
 // Function call to initialize app
 init();

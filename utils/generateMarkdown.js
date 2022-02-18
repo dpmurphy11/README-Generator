@@ -1,20 +1,105 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+  let badge = undefined;
 
-// TODO: Create a function that returns the license section of README
+  switch (license) {
+    case 'Apache':
+      badge = 'https://img.shields.io/badge/License-Apache_2.0-blue.svg';
+      break;
+    case 'BSD':
+      badge = 'https://img.shields.io/badge/License-BSD_3--Clause-blue.svg';
+      break;
+    case 'Eclipse':
+      badge = 'https://img.shields.io/badge/License-EPL_1.0-red.svg';
+      break;
+    case 'GNU GPL v3':
+      badge = 'https://img.shields.io/badge/License-GPLv3-blue.svg';
+      break;
+    case 'GNU GPL v2':
+      badge = 'https://img.shields.io/badge/License-GPL_v2-blue.svg';
+      break;
+    case 'IBM':
+      badge = 'https://img.shields.io/badge/License-IPL_1.0-blue.svg';
+      break;
+    case 'ISC':
+      badge = 'https://img.shields.io/badge/License-ISC-blue.svg';
+      break;
+    case 'MIT':
+      badge = 'https://img.shields.io/badge/License-MIT-yellow.svg';
+      break;
+    case 'Mozilla':
+      badge = 'https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg';
+      break;
+    case 'Unlicense':
+      badge = 'https://img.shields.io/badge/license-Unlicense-blue.svg';
+      break;
+    default:
+      badge = '';
+      break;
+  }
+  return badge;
+}
+
+// function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+  
+  let link = undefined;
+
+  switch (license) {
+    case 'Apache':
+      link = 'https://opensource.org/licenses/Apache-2.0';
+      break;
+    case 'BSD':
+      link = 'https://opensource.org/licenses/BSD-3-Clause';
+      break;
+    case 'Eclipse':
+      link = 'https://opensource.org/licenses/EPL-1.0';
+      break;
+    case 'GNU GPL v3':
+      link = 'https://www.gnu.org/licenses/gpl-3.0';
+      break;
+    case 'GNU GPL v2':
+      link = 'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html';
+      break;
+    case 'IBM':
+      link = 'https://opensource.org/licenses/IPL-1.0';
+      break;
+    case 'ISC':
+      link = 'https://opensource.org/licenses/ISC';
+      break;
+    case 'MIT':
+      link = 'https://opensource.org/licenses/MIT';
+      break;
+    case 'Mozilla':
+      link = 'https://opensource.org/licenses/MPL-2.0';
+      break;
+    case 'Unlicense':
+      link = 'http://unlicense.org/';
+      break;
+    default:
+      link = '';
+      break;
+  }
+  return link;
+}
+
+// function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+
+  let badge = renderLicenseBadge(license);
+  let link = renderLicenseLink(license);
+  return (badge ? `[![GitHub License: ${license}](${badge})](${link})` : '');
+
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
-
-`;
+  return renderLicenseSection(data.license);
+  // return `# ${data.title}`;
 }
 
 module.exports = generateMarkdown;
