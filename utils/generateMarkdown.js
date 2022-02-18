@@ -100,7 +100,7 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
 
   // deconstruct data
-  let { user, email, title, desc, license, install, test, contribute } = data;
+  let { user, email, title, desc, license, install, test, usage, contribute } = data;
   let licBadge = renderLicenseSection(license);
   // return `# ${data.title}\n# ${desc}`;
 
@@ -128,7 +128,7 @@ ${install}
 \`\`\`
 
 ## Usage
-${desc}
+${usage}
 
 ## License
 This project is licensed under the ${license} license.

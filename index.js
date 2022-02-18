@@ -38,6 +38,10 @@ const questions = [{
     default: 'npm test'
 },  {
     type: 'input',
+    name: 'usage',
+    message: 'What does the user need to know about using the repo?',
+},  {
+    type: 'input',
     name: 'contribute',
     message: 'What does the user need to know about contributing to the repo?',
 }
@@ -57,7 +61,7 @@ let init = () => {
 
     inq.prompt(questions).then((answers) => {
         let test = generateMarkdown(answers);
-        writeToFile('README.md', test);
+        writeToFile('./output/README.md', test);
     });
 }
 

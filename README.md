@@ -1,41 +1,23 @@
-# My Project
+# README-Generator
 
-[![GitHub License: Eclipse](https://img.shields.io/badge/License-EPL_1.0-red.svg)](https://opensource.org/licenses/EPL-1.0)
+A command-line application that dynamically generates a professional README.md file from a user's input.
 
-## Description
-ksajk kljskj ks lsdfk
+## Features
 
-## Table of Contents
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
+* When a user is prompted for information about my application repository, a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contributing, Tests, and Questions.
+* When the user chooses a license for my application from a list of options, a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under
+* When the user click on the links in the Table of Contents, they are taken to the corresponding section of the README
+## Technologies
 
-## Installation
-To install the project dependencies, run the following command:
+* VSCode terminal
+* Node.js
+* JavaScipt
+* Template literals
+* JavaScript modules
+* Async writeFile
 
-```
-npm i
-```
+![Application screenshot]()
 
-## Usage
-ksajk kljskj ks lsdfk
+**Repositoy:** <https://github.com/dpmurphy11/README-Generator>
 
-## License
-This project is licensed under the Eclipse license.
-
-## Contributing
-aslk l lkfalkaflk 
-
-## Tests
-To run tests, run the following command:
-
-```
-npm test
-```
-
-## Questions
-If you have any questions about the repo, open an issue or contact me at litewit@gmail.com
-Visit my GitHub profile at [dpmurphy11](https://github.com/dpmurphy11/).
+**Demo:** <>
