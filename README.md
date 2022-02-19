@@ -21,3 +21,5 @@ A command-line application that dynamically generates a professional README.md f
 **Repositoy:** <https://github.com/dpmurphy11/README-Generator>
 
 **Demo:** <>
+
+[Generated README:](output/README.md)
