@@ -20,6 +20,6 @@ A command-line application that dynamically generates a professional README.md f
 
 **Repositoy:** <https://github.com/dpmurphy11/README-Generator>
 
-[Demo Video](./output/README-Generator-video.webm)
+**Demo Video:** <https://drive.google.com/file/d/1Cvmcwl5C4DQGcIvigJKSobLKbvJkGxAV/view?usp=sharing>
 
 [Generated README](./output/README.md)
