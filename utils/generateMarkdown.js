@@ -1,6 +1,6 @@
 // function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {
+let renderLicenseBadge = (license) => {
 
   let badge = undefined;
 
@@ -44,7 +44,7 @@ function renderLicenseBadge(license) {
 
 // function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {
+let  renderLicenseLink = (license) => {
   
   let link = undefined;
 
@@ -88,7 +88,7 @@ function renderLicenseLink(license) {
 
 // function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
+let renderLicenseSection = (license) => {
 
   let badge = renderLicenseBadge(license);
   let link = renderLicenseLink(license);

@@ -16,10 +16,10 @@ A command-line application that dynamically generates a professional README.md f
 * JavaScript modules
 * Async writeFile
 
-![Application screenshot]()
+![Application screenshot](./output/README-Generator-screenshot.png)
 
 **Repositoy:** <https://github.com/dpmurphy11/README-Generator>
 
-**Demo:** <>
+[Demo Video](./output/README-Generator-video.webm)
 
-[Generated README:](output/README.md)
+[Generated README](./output/README.md)

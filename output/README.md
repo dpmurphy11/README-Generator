@@ -1,9 +1,9 @@
-# README Generator
+# Test Project Repo
 
-[![GitHub License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![GitHub License: GNU GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
 ## Description
-A command line app that generates a quality RAEDME.md file.
+This is just a test.
 
 ## Table of Contents
 * [Installation](#installation)
@@ -21,10 +21,10 @@ npm i
 ```
 
 ## Usage
-It's just a test.
+Just run node index.js
 
 ## License
-This project is licensed under the MIT license.
+This project is licensed under the GNU GPL v2 license.
 
 ## Contributing
 No need. Thanks!

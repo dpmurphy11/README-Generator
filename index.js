@@ -48,7 +48,7 @@ const questions = [{
 ];
 
 //  Create a function to write README file
-function writeToFile(fileName, data) {
+let writeToFile = (fileName, data) => {
     fs.writeFile(fileName, data, (err) => {
         err ? console.log(`Unable to save file. ${err}`) : console.log('The file has been saved!');
     })
@@ -56,12 +56,11 @@ function writeToFile(fileName, data) {
 
 // Create a function to initialize app
 let init = () => {
-
     const generateMarkdown = require('./utils/generateMarkdown');
 
     inq.prompt(questions).then((answers) => {
-        let test = generateMarkdown(answers);
-        writeToFile('./output/README.md', test);
+        let output = generateMarkdown(answers);
+        writeToFile('./output/README.md', output);
     });
 }
 
