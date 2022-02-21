@@ -1,6 +1,7 @@
 //Include packages needed for this application
 const inq = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown');
 
 // Create an array of questions for user input
 const questions = [{
@@ -56,8 +57,6 @@ let writeToFile = (fileName, data) => {
 
 // Create a function to initialize app
 let init = () => {
-    const generateMarkdown = require('./utils/generateMarkdown');
-
     inq.prompt(questions).then((answers) => {
         let output = generateMarkdown(answers);
         writeToFile('./output/README.md', output);
